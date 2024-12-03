@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: CI
 
 on:
   push:
@@ -13,18 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16'  # ou a versão que você estiver usando
 
       - name: Install dependencies
-        run: npm install
+        run: npm install  # ou yarn install
 
       - name: Run Cypress tests
-        run: npx cypress run
-        env:
-          CYPRESS_BASE_URL: 'https://opensource-demo.orangehrmlive.com'
+        run: npx cypress run  # ou npx cypress open se preferir
