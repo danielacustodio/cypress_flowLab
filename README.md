@@ -1,1 +1,1 @@
-# Meu Repositório
+Esse código foi gerado pelo coder para criar uma automação em cypress através de uma story e também seus teste cases relacionados a story para que possa ser utilizado mais rápido no Jira. 
