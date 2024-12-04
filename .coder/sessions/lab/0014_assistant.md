@@ -1,3 +1,5 @@
+### cypress/integration/login.spec.js [coder:save]
+```javascript
 /// <reference types="cypress" />
 
 describe('Validação de Login no Sistema OrangeHRM', () => {
@@ -20,7 +22,7 @@ describe('Validação de Login no Sistema OrangeHRM', () => {
     cy.screenshot('02-username-inserido');
 
     // E eu inserir a password "admin123" no campo de senha
-    cy.xpath("//input[@name='password' and @placeholder='Password']").type('admin123');
+    cy.xpath("//input[@type='password' and @name='password']").type('admin123');
     cy.screenshot('03-password-inserido');
 
     // E eu clicar no botão de Login
@@ -46,7 +48,7 @@ describe('Validação de Login no Sistema OrangeHRM', () => {
     cy.screenshot('02-username-inserido');
 
     // E eu inserir a password "senha_incorreta" no campo de senha
-    cy.xpath("//input[@name='password' and @placeholder='Password']").type('senha_incorreta');
+    cy.xpath("//input[@type='password' and @name='password']").type('senha_incorreta');
     cy.screenshot('03-password-inserido');
 
     // E eu clicar no botão de Login
@@ -58,3 +60,5 @@ describe('Validação de Login no Sistema OrangeHRM', () => {
     cy.screenshot('05-mensagem-erro-credenciais-invalidas');
   });
 });
+```
+[coder:end]
